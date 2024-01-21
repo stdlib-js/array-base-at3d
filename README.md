@@ -45,30 +45,38 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/array-base-at3d
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var at3d = require( '@stdlib/array-base-at3d' );
+at3d = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-at3d@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var at3d = require( 'path/to/vendor/umd/array-base-at3d/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-at3d@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.at3d;
+})();
+</script>
 ```
 
 #### at3d( x, i0, i1, i2 )
@@ -117,9 +125,14 @@ The function accepts the following arguments:
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var papply = require( '@stdlib/utils-papply' );
-var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-papply@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {.factory;
 var filled3dBy = require( '@stdlib/array-base-filled3d-by' );
 var ternary3d = require( '@stdlib/array-base-ternary3d' );
 var zeros3d = require( '@stdlib/array-base-zeros3d' );
@@ -148,6 +161,11 @@ console.log( out );
 // Fill the output array with randomly selected values from the input array:
 ternary3d( [ i0, i1, i2, out ], shape, papply( at3d, x ) );
 console.log( out );
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
