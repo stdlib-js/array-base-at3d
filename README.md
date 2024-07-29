@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import at3d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-at3d@deno/mod.js';
+import at3d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-at3d@v0.2.2-deno/mod.js';
 ```
 
 #### at3d( x, i0, i1, i2 )
@@ -107,7 +107,7 @@ var discreteUniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-bas
 import filled3dBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-filled3d-by@deno/mod.js';
 import ternary3d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-ternary3d@deno/mod.js';
 import zeros3d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zeros3d@deno/mod.js';
-import at3d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-at3d@deno/mod.js';
+import at3d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-at3d@v0.2.2-deno/mod.js';
 
 var shape = [ 3, 3, 3 ];
 
